@@ -33,10 +33,14 @@ spec:
   selector:
     matchLabels:
       app: nginx
+      tier: app
+      version: v1
   template:
     metadata:
       labels:
         app: nginx
+        tier: app
+        version: v1
     spec:
       containers:
       - name: nginx
