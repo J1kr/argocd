@@ -32,22 +32,18 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: echo
-      tier: app
-      version: v1
+      app: nginx
   template:
     metadata:
       labels:
-        app: echo
-        tier: app
-        version: v1
+        app: nginx
     spec:
       containers:
-        - name: nginx
-          image: nginx:latest
-          ports:
-          - containerPort: 80
-          imagePullPolicy: Always
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
 
 ---
 apiVersion: v1
