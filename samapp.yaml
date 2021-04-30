@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: cicdex
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/J1kr/argocd.git
+    targetRevision: HEAD
+    path: guestbook
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cicdex
+  
