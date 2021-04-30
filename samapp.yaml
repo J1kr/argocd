@@ -13,6 +13,8 @@ spec:
     automated:
       prune: true
       allowEmpty: true
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
   destination:
     server: https://kubernetes.default.svc
     namespace: cicdex

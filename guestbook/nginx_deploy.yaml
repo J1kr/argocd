@@ -29,7 +29,7 @@ kind: Deployment
 metadata:
   name: nginx-v1
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: nginx-v1
