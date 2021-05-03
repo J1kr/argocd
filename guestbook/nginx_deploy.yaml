@@ -29,7 +29,7 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
-  replicas: 2
+  replicas: 10
   selector:
     matchLabels:
       app: nginx
@@ -43,6 +43,10 @@ spec:
           image: nginx:latest
           ports:
           - containerPort: 80
+          resources:
+            requests:
+              cpu: 500m
+              memory: 500M
 
 ---
 apiVersion: v1
