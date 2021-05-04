@@ -2,9 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: php-apache
-  namespace: cicdex
+  namespace: argocd
 spec:
-  project: cicdex
+  project: default
   source:
     repoURL: https://github.com/J1kr/argocd.git
     targetRevision: HEAD
