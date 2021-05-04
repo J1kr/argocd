@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: php-apache
+  namespace: cicdex
+spec:
+  project: cicdex
+  source:
+    repoURL: https://github.com/J1kr/argocd.git
+    targetRevision: HEAD
+    path: php-apache
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cicdex
+  
