@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts: 
         - php.mogki.com
-      secretName: nginx-mogki-se
+      secretName: php-mogki-se
   rules:
     - host: php.mogki.com
       http:
